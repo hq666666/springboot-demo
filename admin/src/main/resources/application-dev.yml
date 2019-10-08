@@ -1,0 +1,36 @@
+#热部署生效
+spring:
+        datasource:
+          type: com.alibaba.druid.pool.DruidDataSource
+          druid:
+            driver-class-name: com.mysql.jdbc.Driver
+            url: jdbc:mysql://192.168.92.114:3306/crm01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+            username: root
+            password: 123456
+            initial-size: 10
+            max-active: 100
+            min-idle: 10
+            max-wait: 60000
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            #回收可用连接的时间
+            time-between-eviction-runs-millis: 60000
+            #最小可回收空闲时间
+            min-evictable-idle-time-millis: 300000
+            #测试属性配置
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            #静态页面配置
+            stat-view-servlet:
+                  enabled: true
+                  url-pattern: /druid/*
+            #filte配置
+            filter:
+              stat:
+                log-slow-sql: true
+                slow-sql-millis: 1000
+                merge-sql: false
+              wall:
+                config:
+                  multi-statement-allow: true
