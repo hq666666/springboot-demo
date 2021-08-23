@@ -75,7 +75,7 @@
         <swagger.version>2.7.0</swagger.version>
         <commons.configuration.version>1.10</commons.configuration.version>
         <hutool-all.version>4.0.12</hutool-all.version>
-        <jsoup.version>1.10.2</jsoup.version>
+        <jsoup.version>1.14.2</jsoup.version>
         <lombok.version>1.18.4</lombok.version>
    </properties>
     <dependencies>
